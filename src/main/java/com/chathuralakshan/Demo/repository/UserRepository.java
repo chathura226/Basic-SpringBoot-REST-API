@@ -11,4 +11,6 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     @Query(value = "SELECT * FROM user WHERE id=?1 AND address=?2",nativeQuery = true)
     User getUserByIDAndAddress(String userID,String address);
+
+    //if writing a update native query, use "Modifying " annotation also
 }
